@@ -7,7 +7,7 @@ import java.awt.event.*;
 public class Main extends JFrame {
     JButton click_button = new JButton("Click");
     JButton cancel_button = new JButton("Cancel");
-    JButton draw_button = new JButton("마우스로 그리기");  // 마우스로 그리기 버튼
+    JButton draw_button = new JButton("마우스로 그리기");
     
     JTextField point1_x = new JTextField(5);
     JTextField point1_y = new JTextField(5);
@@ -19,11 +19,12 @@ public class Main extends JFrame {
     int x1, y1, x2, y2;  // 두 점의 좌표
     
     public Main() {
+    	setTitle("명지대_정민규_패턴_프로젝트");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(600, 800);
+        setSize(600, 800); // Frame 사이즈 설정
         setVisible(true);
         
-        Container contentPane = getContentPane();
+        Container contentPane = getContentPane(); // 사용자로부터 점을 입력받을 Pane
         contentPane.setLayout(new BorderLayout());
         
         // 좌표 입력 필드를 포함한 패널
@@ -42,12 +43,12 @@ public class Main extends JFrame {
         buttonPanel.setLayout(new FlowLayout());
         buttonPanel.add(click_button);
         buttonPanel.add(cancel_button);
-        buttonPanel.add(draw_button);  // 마우스로 그리기 버튼 추가
+        buttonPanel.add(draw_button);  // 마우스로 그리기 Frame으로 이동하는 버튼
         
         contentPane.add(panel, BorderLayout.CENTER);
         contentPane.add(buttonPanel, BorderLayout.SOUTH);
         
-        // 클릭 버튼 이벤트 (네모 그리기)
+        // 클릭 버튼 이벤트 (좌표 입력받아서, 네모 그리기)
         click_button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -59,19 +60,16 @@ public class Main extends JFrame {
                     new DrawRectangleFrame(x1, y1, x2, y2);  // 네모 그리기 화면 새로 띄우기
                     setVisible(false);  // 기존 화면 숨기기
                 } catch (NumberFormatException ex) {
-                    JOptionPane.showMessageDialog(null, "Invalid input. Please enter valid coordinates.");
+                    JOptionPane.showMessageDialog(null, "제대로 입력해주세요. 오류가 발생했습니다.");
                 }
             }
         });
         
-        // 취소 버튼 이벤트 (모든 필드 초기화)
+        // 취소 버튼 이벤트(프로그램 종료)
         cancel_button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                point1_x.setText("");
-                point1_y.setText("");
-                point2_x.setText("");
-                point2_y.setText("");
+            	dispose();
             }
         });
         
@@ -125,6 +123,7 @@ public class Main extends JFrame {
         int startX, startY, endX, endY;  // 마우스 시작과 끝 좌표
         JButton back_button = new JButton("Back");  // Back 버튼 추가
         
+        // 마우스로 그리는 Frame
         public MouseDrawingFrame() {
             setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             setSize(600, 800);
@@ -186,8 +185,3 @@ public class Main extends JFrame {
         new Main();
     }
 }
-
-
-//명지대_정민규_패턴_프로젝트
-
-//setTitle("명지대_정민규_패턴_프로젝트");
