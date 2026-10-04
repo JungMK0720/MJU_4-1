@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GConstants>
+    <EMainFrame eX="200" eY="100" eW="1000" eH="500" />
+    <EHelpMenuItem>
+        <eShortcut label="ショートカットヘルプ" methodName="showHelpDialog" />
+    </EHelpMenuItem>
+    <EMenu>
+        <eFileMenu label="ファイル" />
+        <eEditMenu label="編集" />
+        <eGraphicsMenu label="グラフィックプロパティ" />
+    </EMenu>
+    <EFileMenuItem defaultPathName="E:\4-1\MJU_Pattern\Drawing">
+        <eNew    label="新規ウィンドウ"      methodName="newPanel" />
+        <eOpen   label="開く"                methodName="open" />
+        <eSave   label="保存"                methodName="save" />
+        <eSaveAs label="名前を付けて保存"    methodName="saveAs" />
+        <eClose  label="閉じる"              methodName="close" />
+        <ePrint  label="印刷"                methodName="print" />
+        <eExit   label="終了"                methodName="quit" />
+    </EFileMenuItem>
+    <EEditMenuItem>
+        <eReDo    label="やり直し"           methodName="redoAction" />
+        <eUnDo    label="元に戻す"           methodName="undoAction" />
+        <eCut     label="切り取り"           methodName="cut" />
+        <eCopy    label="コピー"             methodName="copy" />
+        <ePaste   label="貼り付け"           methodName="paste" />
+        <eDelete  label="削除"               methodName="delete" />
+        <eGroup   label="グループ化"         methodName="group" />
+        <eUnGroup label="グループ解除"       methodName="ungroup" />
+    </EEditMenuItem>
+    <EGraphicsMenuItem>
+        <eFontStyle label="フォントスタイル"     toolTipText="フォントスタイルを変更" />
+        <eLineStyle label="線のスタイル"         toolTipText="線のスタイルを変更" />
+        <eLineColor label="線の色"               toolTipText="線の色を変更" />
+        <eFillColor label="塗りつぶしの色"       toolTipText="塗りつぶしの色を変更" />
+    </EGraphicsMenuItem>
+    <EToolBarGroup>
+        <eSelect   label="選択ツール"        toolTipText="図形を選択します" />
+        <eDrawing  label="描画ツール"        toolTipText="図形を描きます" />
+        <eColor    label="カラーピッカー"    toolTipText="色を選択します" />
+        <eLine     label="フリーハンドツール" toolTipText="フリーハンドで線を描きます" />
+        <eTextArea label="テキストボックス"  toolTipText="テキストボックスを挿入します" />
+        <eFunction label="編集ツール"        toolTipText="図形を編集します" />
+    </EToolBarGroup>
+    <EElement>
+        <colorBtn    label="その他の色…"     toolTipText="他の色を表示します"      pertainGroup="eColor" />
+        <colorDialog label="カラーセレクタ"  toolTipText="色を選択します"        pertainGroup="eColor" />
+
+        <colorSwatch label="#000000" toolTipText="黒"       />
+        <colorSwatch label="#FFFFFF" toolTipText="白"       />
+        <colorSwatch label="#FF0000" toolTipText="赤"       />
+        <colorSwatch label="#00FF00" toolTipText="緑"       />
+        <colorSwatch label="#0000FF" toolTipText="青"       />
+        <colorSwatch label="#FFFF00" toolTipText="黄"       />
+        <colorSwatch label="#FFA500" toolTipText="オレンジ" />
+        <colorSwatch label="#00FFFF" toolTipText="シアン"   />
+        <colorSwatch label="#FF00FF" toolTipText="マゼンタ" />
+        <colorSwatch label="#C0C0C0" toolTipText="銀"       />
+        <colorSwatch label="#808080" toolTipText="グレー"   />
+        <colorSwatch label="#008000" toolTipText="ダークグリーン" />
+        <colorSwatch label="#800000" toolTipText="ダークレッド"   />
+    </EElement>
+
+    <EShapeTool>
+        <eSelect    label="選択"       ePoints="e2P" toolTipText="図形を選択します"       className="shapes.GRectangle" pertainGroup="eSelect" />
+        <eRectnalge label="長方形"     ePoints="e2P" toolTipText="長方形を描きます"       className="shapes.GRectangle" pertainGroup="eDrawing" />
+        <eEllipse   label="楕円"       ePoints="e2P" toolTipText="楕円を描きます"         className="shapes.GEllipse"   pertainGroup="eDrawing" />
+        <eFreeLine  label="フリーハンド" ePoints="e2P" toolTipText="フリーハンドラインを描きます" className="shapes.GFreeLine" pertainGroup="eLine" />
+        <eLine      label="直線"       ePoints="e2P" toolTipText="直線を描きます"         className="shapes.GLine"     pertainGroup="eDrawing" />
+        <ePolygon   label="多角形"     ePoints="eNP" toolTipText="多角形を描きます"       className="shapes.GPolygon"  pertainGroup="eDrawing" />
+        <eTextArea  label="テキストボックス" ePoints="e2P" toolTipText="テキストボックスを挿入します" className="shapes.GTextArea" pertainGroup="eTextArea" />
+    </EShapeTool>
+    <EFunctionTool>
+        <eGroup    label="グループ化"         toolTipText="選択した図形をグループ化します"      pertainGroup="eFunction" />
+        <eUnGroup  label="グループ解除"       toolTipText="グループを解除します"             pertainGroup="eFunction" />
+        <eCrop     label="トリミング"         toolTipText="選択領域をトリミングします"       pertainGroup="eFunction" />
+        <eRedo     label="やり直し"           toolTipText="最後の操作をやり直します"         pertainGroup="eFunction" />
+        <eUndo     label="元に戻す"           toolTipText="最後の操作を取り消します"         pertainGroup="eFunction" />
+        <eDelete   label="削除"               toolTipText="選択した図形を削除します"         pertainGroup="eFunction" />
+        <eCopy     label="コピー"             toolTipText="選択した図形をコピーします"       pertainGroup="eFunction" />
+        <ePaste    label="貼り付け"           toolTipText="図形を貼り付けます"             pertainGroup="eFunction" />
+        <eToFront  label="前面へ移動"         toolTipText="図形を一つ前面に移動します"       pertainGroup="eFunction" />
+        <eToBack   label="背面へ移動"         toolTipText="図形を一つ背面に移動します"       pertainGroup="eFunction" />
+    </EFunctionTool>
+</GConstants>

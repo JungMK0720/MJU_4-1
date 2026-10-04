@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GConstants>
+	<EMainFrame eX="200" eY="100" eW="1000" eH="500" />
+	<EHelpMenuItem>
+		<eShortcut label="단축키 안내" methodName="showHelpDialog" />
+	</EHelpMenuItem>
+	<EMenu>
+		<eFileMenu label="파일" />
+		<eEditMenu label="편집" />
+		<eGraphicsMenu label="그래픽속성" />
+	</EMenu>
+	<EFileMenuItem
+		defaultPathName="E:\4-1\MJU_Pattern\Drawing">
+		<eNew label="새 창" methodName="newPanel" />
+		<eOpen label="열기" methodName="open" />
+		<eSave label="저장" methodName="save" />
+		<eSaveAs label="다른이름으로" methodName="saveAs" />
+		<eClose label="닫기" methodName="close" />
+		<ePrint label="프린트" methodName="print" />
+		<eExit label="종료" methodName="quit" />
+	</EFileMenuItem>
+	<EEditMenuItem>
+		<eReDo label="다시실행" methodName="새로운 파일을 생성" />
+		<eUnDo label="되돌리기" methodName="새로운 파일을 생성" />
+		<eCut label="오려두기" methodName="새로운 파일을 생성" />
+		<eCopy label="복사" methodName="새로운 파일을 생성" />
+		<ePaste label="붙이기" methodName="새로운 파일을 생성" />
+		<eDelete label="지우기" methodName="새로운 파일을 생성" />
+		<eGroup label="그룹" methodName="새로운 파일을 생성" />
+		<eUnGroup label="그룹해제" methodName="새로운 파일을 생성" />
+	</EEditMenuItem>
+	<EGraphicsMenuItem>
+		<eFontStyle label="글자모양" toolTipText="새로운 파일을 생성" />
+		<elineStyle label="라인모양" toolTipText="새로운 파일을 생성" />
+		<eLineColor label="라인색" toolTipText="새로운 파일을 생성" />
+		<eFillColor label="채우기색" toolTipText="새로운 파일을 생성" />
+	</EGraphicsMenuItem>
+	<EToolBarGroup>
+		<eSelect label="선택 도구" toolTipText="도형을 선택합니다." />
+		<eDrawing label="그리기 도구" toolTipText="그림을 그릴 수 있습니다." />
+		<eColor label="색깔" toolTipText="색깔을 설정할 수 있습니다." />
+		<eLine label="라인도구" toolTipText="자유 선을 그릴 수 있습니다." />
+		<eTextArea label="글 상자" toolTipText="글 상자를 넣을 수 있습니다." />
+		<eFunction label="도형 편집" toolTipText="도형을 편집합니다." />
+	</EToolBarGroup>
+	<EElement>
+		<colorBtn label="... 더보기" toolTipText="색깔을 더 볼 수 있습니다."
+			pertainGroup="eColor" />
+		<colorDialog label="색깔 선택" toolTipText="색깔을 선택할 수 있습니다."
+			pertainGroup="eColor" />
+
+		<colorSwatch label="#000000" toolTipText="검정" />
+		<colorSwatch label="#FFFFFF" toolTipText="하양" />
+		<colorSwatch label="#FF0000" toolTipText="빨강" />
+		<colorSwatch label="#00FF00" toolTipText="초록" />
+		<colorSwatch label="#0000FF" toolTipText="파랑" />
+		<colorSwatch label="#FFFF00" toolTipText="노랑" />
+		<colorSwatch label="#FFA500" toolTipText="주황" />
+		<colorSwatch label="#00FFFF" toolTipText="시안" />
+		<colorSwatch label="#FF00FF" toolTipText="마젠타" />
+		<colorSwatch label="#C0C0C0" toolTipText="은색" />
+		<colorSwatch label="#808080" toolTipText="회색" />
+		<colorSwatch label="#008000" toolTipText="다크그린" />
+		<colorSwatch label="#800000" toolTipText="다크레드" />
+	</EElement>
+
+
+	<EShapeTool>
+		<eSelect label="선택" ePoints="e2P" toolTipText="도형을 선택합니다."
+			className="shapes.GRectangle" pertainGroup="eSelect" />
+		<eRectnalge label="네모" ePoints="e2P"
+			toolTipText="네모를 그립니다." className="shapes.GRectangle"
+			pertainGroup="eDrawing" />
+		<eEllipse label="원" ePoints="e2P" toolTipText="원을 그립니다."
+			className="shapes.GEllipse" pertainGroup="eDrawing" />
+		<eFreeLine label="자유선" ePoints="e2P"
+			toolTipText="자유 선을 그립니다." className="shapes.GFreeLine"
+			pertainGroup="eLine" />
+		<eLine label="선" ePoints="e2P" toolTipText="2차원 선을 그립니다."
+			className="shapes.GLine" pertainGroup="eDrawing" />
+		<ePolygon label="다각형" ePoints="eNP" toolTipText="다각형을 그립니다."
+			className="shapes.GPolygon" pertainGroup="eDrawing" />
+		<eTextArea label="글 상자" ePoints="e2P"
+			toolTipText="글 상자를 넣습니다." className="shapes.GTextArea"
+			pertainGroup="eTextArea" />
+	</EShapeTool>
+	<EFunctionTool>
+		<eGroup label="그룹화" toolTipText="여러 도형을 그룹으로 묶음"
+			pertainGroup="eFunction" />
+		<eUnGroup label="그룹해제" toolTipText="그룹화 해제"
+			pertainGroup="eFunction" />
+		<eCrop label="자르기" toolTipText="선택 영역 자르기"
+			pertainGroup="eFunction" />
+		<eRedo label="다시 실행" toolTipText="되돌린 작업 복구"
+			pertainGroup="eFunction" />
+		<eUndo label="실행 취소" toolTipText="마지막 작업 취소"
+			pertainGroup="eFunction" />
+		<eDelete label="삭제" toolTipText="도형을 삭제합니다."
+			pertainGroup="eFunction" />
+		<eCopy label="복사" toolTipText="도형을 복사합니다."
+			pertainGroup="eFunction" />
+		<ePaste label="붙여넣기" toolTipText="도형을 붙여넣습니다."
+			pertainGroup="eFunction" />
+		<eToFront label="앞으로" toolTipText="선택된 도형을 앞으로 보냅니다."
+			pertainGroup="eFunction" />
+		<eToBack label="뒤로" toolTipText="선택된 도형을 뒤로 보냅니다."
+			pertainGroup="eFunction" />
+
+	</EFunctionTool>
+
+
+</GConstants>

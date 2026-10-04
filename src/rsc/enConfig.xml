@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GConstants>
+	<EMainFrame eX="200" eY="100" eW="1000" eH="500" />
+	<EHelpMenuItem>
+		<eShortcut label="Shortcut Help" methodName="showHelpDialog" />
+	</EHelpMenuItem>
+	<EMenu>
+		<eFileMenu label="File" />
+		<eEditMenu label="Edit" />
+		<eGraphicsMenu label="Graphics Properties" />
+	</EMenu>
+	<EFileMenuItem
+		defaultPathName="E:\4-1\MJU_Pattern\Drawing">
+		<eNew label="New Window" methodName="newPanel" />
+		<eOpen label="Open" methodName="open" />
+		<eSave label="Save" methodName="save" />
+		<eSaveAs label="Save As..." methodName="saveAs" />
+		<eClose label="Close" methodName="close" />
+		<ePrint label="Print" methodName="print" />
+		<eExit label="Exit" methodName="quit" />
+	</EFileMenuItem>
+	<EEditMenuItem>
+		<eReDo label="Redo" methodName="redoAction" />
+		<eUnDo label="Undo" methodName="undoAction" />
+		<eCut label="Cut" methodName="cut" />
+		<eCopy label="Copy" methodName="copy" />
+		<ePaste label="Paste" methodName="paste" />
+		<eDelete label="Delete" methodName="delete" />
+		<eGroup label="Group" methodName="group" />
+		<eUnGroup label="Ungroup" methodName="ungroup" />
+	</EEditMenuItem>
+	<EGraphicsMenuItem>
+		<eFontStyle label="Font Style"
+			toolTipText="Change font style" />
+		<eLineStyle label="Line Style"
+			toolTipText="Change line style" />
+		<eLineColor label="Line Color"
+			toolTipText="Change line color" />
+		<eFillColor label="Fill Color"
+			toolTipText="Change fill color" />
+	</EGraphicsMenuItem>
+	<EToolBarGroup>
+		<eSelect label="Select Tool" toolTipText="Select shapes" />
+		<eDrawing label="Draw Tool" toolTipText="Draw shapes" />
+		<eColor label="Color Picker" toolTipText="Choose a color" />
+		<eLine label="Freehand Tool" toolTipText="Draw freehand lines" />
+		<eTextArea label="Text Box" toolTipText="Insert text box" />
+		<eFunction label="Edit Tool" toolTipText="Edit shapes" />
+	</EToolBarGroup>
+	<EElement>
+		<colorBtn label="More Colors…" toolTipText="View more colors"
+			pertainGroup="eColor" />
+		<colorDialog label="Color Selector"
+			toolTipText="Select a color" pertainGroup="eColor" />
+
+		<colorSwatch label="#000000" toolTipText="Black" />
+		<colorSwatch label="#FFFFFF" toolTipText="White" />
+		<colorSwatch label="#FF0000" toolTipText="Red" />
+		<colorSwatch label="#00FF00" toolTipText="Green" />
+		<colorSwatch label="#0000FF" toolTipText="Blue" />
+		<colorSwatch label="#FFFF00" toolTipText="Yellow" />
+		<colorSwatch label="#FFA500" toolTipText="Orange" />
+		<colorSwatch label="#00FFFF" toolTipText="Cyan" />
+		<colorSwatch label="#FF00FF" toolTipText="Magenta" />
+		<colorSwatch label="#C0C0C0" toolTipText="Silver" />
+		<colorSwatch label="#808080" toolTipText="Gray" />
+		<colorSwatch label="#008000" toolTipText="Dark Green" />
+		<colorSwatch label="#800000" toolTipText="Dark Red" />
+	</EElement>
+
+	<EShapeTool>
+		<eSelect label="Select" ePoints="e2P"
+			toolTipText="Select a shape" className="shapes.GRectangle"
+			pertainGroup="eSelect" />
+		<eRectnalge label="Rectangle" ePoints="e2P"
+			toolTipText="Draw a rectangle" className="shapes.GRectangle"
+			pertainGroup="eDrawing" />
+		<eEllipse label="Ellipse" ePoints="e2P"
+			toolTipText="Draw an ellipse" className="shapes.GEllipse"
+			pertainGroup="eDrawing" />
+		<eFreeLine label="Freehand" ePoints="e2P"
+			toolTipText="Draw a freehand line" className="shapes.GFreeLine"
+			pertainGroup="eLine" />
+		<eLine label="Line" ePoints="e2P"
+			toolTipText="Draw a straight line" className="shapes.GLine"
+			pertainGroup="eDrawing" />
+		<ePolygon label="Polygon" ePoints="eNP"
+			toolTipText="Draw a polygon" className="shapes.GPolygon"
+			pertainGroup="eDrawing" />
+		<eTextArea label="Text Box" ePoints="e2P"
+			toolTipText="Insert a text box" className="shapes.GTextArea"
+			pertainGroup="eTextArea" />
+	</EShapeTool>
+	<EFunctionTool>
+		<eGroup label="Group" toolTipText="Group selected shapes"
+			pertainGroup="eFunction" />
+		<eUnGroup label="Ungroup"
+			toolTipText="Ungroup selected shapes" pertainGroup="eFunction" />
+		<eCrop label="Crop" toolTipText="Crop selected area"
+			pertainGroup="eFunction" />
+		<eRedo label="Redo" toolTipText="Redo last action"
+			pertainGroup="eFunction" />
+		<eUndo label="Undo" toolTipText="Undo last action"
+			pertainGroup="eFunction" />
+		<eDelete label="Delete" toolTipText="Delete selected shapes"
+			pertainGroup="eFunction" />
+		<eCopy label="Copy" toolTipText="Copy selected shapes"
+			pertainGroup="eFunction" />
+		<ePaste label="Paste" toolTipText="Paste shapes"
+			pertainGroup="eFunction" />
+		<eToFront label="Bring Forward"
+			toolTipText="Bring shape one step forward" pertainGroup="eFunction" />
+		<eToBack label="Send Backward"
+			toolTipText="Send shape one step backward" pertainGroup="eFunction" />
+	</EFunctionTool>
+</GConstants>
